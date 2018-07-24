@@ -1,0 +1,30 @@
+
+<ion-content padding color="base">
+
+  <ion-title text-center>
+    <h1><ion-icon name="logo-apple"></ion-icon>Plentyco</h1>
+  </ion-title>
+  <ion-item>
+    <ion-input type="text" [(ngModel)]="user.Username" name="Username" clearInput="true" placeholder="Your username"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="password" [(ngModel)]="user.Password" name="Password" clearInput="true" placeholder="Your password"></ion-input>
+  </ion-item>
+
+  <ion-label>
+    <p text-left *ngIf="loginError">Your username or password is wrong.</p>
+  </ion-label>
+
+  <button ion-button block color="danger" outline type="button" (click)="login()">Log in</button>
+
+  <ion-label text-center>
+    <button ion-button clear type="button" (click)="goToForgotPass()">Forgot your username or password</button>
+  </ion-label>
+
+  <button ion-button full color="danger">
+    <ion-icon name="pin">  </ion-icon>
+    Please activate your GPS to log in
+  </button>
+
+</ion-content>
